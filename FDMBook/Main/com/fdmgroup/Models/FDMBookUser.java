@@ -2,15 +2,43 @@ package com.fdmgroup.Models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+
+
+
+/**
+ * 
+ * @author Sahil Shah
+ * @version 1.0
+ * 
+ * Basic POJO. No Persistence Available Yet.
+ *
+ */
+@Entity
 public class FDMBookUser 
 {
 	
+	@Column
 	private int userId;
+	
+	@Column
 	private String firstName;
+	
+	@Column
 	private String lastName;
+	
+	@Column
 	private String emailAddress;
+	
+	@Column
 	private String password;
+	
+	@Column
 	private Date dateOfBirth;
+	
+	@Column
 	private Date memberSince;
 	
 	/**
