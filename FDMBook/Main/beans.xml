@@ -12,13 +12,6 @@
        <context:annotation-config />
 
 	<!-- Bean declarations go here -->
-<!-- 	<bean id="newIssueTracing" class="com.fdmgroup.heatseeker.helperClass.NewIssueTracing"> -->
-<!-- 		<property name="issues"> -->
-<!-- 			<list> -->
-			
-<!-- 			</list> -->
-<!-- 		</property> -->
-<!-- 	</bean> -->
 	
     <bean id="applicationContextProvider" class="com.fdmgroup.heatseeker.DAOs.ApplicationContextProvider"/>	
 	
