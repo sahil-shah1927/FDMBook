@@ -9,6 +9,6 @@ public class DirectoryController {
 	
 	@RequestMapping(value="/")
 	public String goWelcome() {
-		return "index.php";
+		return "index";
 	}
 }
