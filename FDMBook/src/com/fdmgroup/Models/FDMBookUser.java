@@ -22,7 +22,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FDMBOOKUSERS")
-public class FDMBookUser 
+public class FDMBookUser
 {
 	
 	@Id
