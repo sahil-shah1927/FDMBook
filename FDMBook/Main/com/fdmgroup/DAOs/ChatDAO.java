@@ -14,7 +14,7 @@ import com.fdmgroup.Models.ChatHistory;
  * @author kishan.patel1
  *
  */
-public class ChatDAO implements UserStorage<ChatHistory> {
+public class ChatDAO implements Storage<ChatHistory> {
 
 	
 	private EntityManagerFactory emf;
