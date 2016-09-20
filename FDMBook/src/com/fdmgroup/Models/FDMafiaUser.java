@@ -36,6 +36,9 @@ public class FDMafiaUser
 	private String lastName;
 	
 	@Column
+	private String username;
+	
+	@Column
 	private String emailAddress;
 	
 	@Column
@@ -151,6 +154,20 @@ public class FDMafiaUser
 	 */
 	public void setMemberSince(Date memberSince) {
 		this.memberSince = memberSince;
+	}
+
+	/**
+	 * @return the username
+	 */
+	public String getUsername() {
+		return username;
+	}
+
+	/**
+	 * @param username the username to set
+	 */
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	
 	

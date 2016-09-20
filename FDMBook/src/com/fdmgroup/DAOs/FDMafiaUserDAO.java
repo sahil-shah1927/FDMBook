@@ -2,7 +2,11 @@ package com.fdmgroup.DAOs;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
+import com.fdmgroup.Exceptions.UserDoesNotExistException;
 import com.fdmgroup.Models.FDMafiaUser;
 
 public class FDMafiaUserDAO extends DAO<FDMafiaUser>
@@ -25,18 +29,40 @@ public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 	}
 
 	@Override
-	public FDMafiaUser read(FDMafiaUser object) throws Exception 
+	public FDMafiaUser read(FDMafiaUser userToBeRead) throws UserDoesNotExistException 
 	{
 		EntityManager myEM = myFactory.createEntityManager();
+		String username = userToBeRead.getUsername();
 		
-		String query = "SELECT FROM ";
-		return null;
+		//Create Query for User using username
+		String queryString = "SELECT u FROM FDMafiaUser u WHERE u.username = :username";
+		Query userQuery = myEM.createNativeQuery(queryString, FDMafiaUser.class);
+		userQuery.setParameter("username", username);
+		
+		//Attempt User Retrieval
+		try
+		{
+			return (FDMafiaUser) userQuery.getSingleResult();
+		}
+		catch(NoResultException noResultException)
+		{
+			throw new UserDoesNotExistException("Username '" + username + "' is not registered!");
+		}
+		finally
+		{
+			myEM.close();
+		}
 	}
 
 	@Override
-	public void update(FDMafiaUser object) {
-		// TODO Auto-generated method stub
+	public void update(FDMafiaUser userToBeUpdated) 
+	{
+		EntityManager myEM = myFactory.createEntityManager();
 		
+		myEM.getTransaction().begin();
+		myEM.merge(userToBeUpdated);
+		myEM.getTransaction().commit();
+		myEM.close();
 	}
 
 	@Override

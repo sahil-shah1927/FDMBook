@@ -6,12 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
+import javax.persistence.Query;
 
 import com.fdmgroup.Models.ChatHistory;
 
 /**
  * 
- * @author kishan.patel1
+ * @author Kishan Patel
  *
  */
 public class ChatDAO implements Storage<ChatHistory> {
@@ -47,9 +48,9 @@ public class ChatDAO implements Storage<ChatHistory> {
 	public ChatHistory read(String uniqueID) {
 		EntityManager em = emf.createEntityManager();
 		try {
-			TypedQuery<ChatHistory> query = em.createQuery("SELECT ch FROM ChatHistory ch WHERE LOWER(ch.uniqueID) = LOWER(:uniqueID)",ChatHistory.class);
+			Query query = em.createNativeQuery("SELECT ch FROM ChatHistory ch WHERE LOWER(ch.uniqueID) = LOWER(:uniqueID)",ChatHistory.class);
 			query.setParameter("uniqueID", uniqueID);
-			ChatHistory chatRoom = query.getSingleResult();
+			ChatHistory chatRoom = (ChatHistory) query.getSingleResult();
 			em.close();
 
 			return chatRoom;
@@ -65,8 +66,8 @@ public class ChatDAO implements Storage<ChatHistory> {
 	 */
 	public List<ChatHistory> readAll() {
 		EntityManager em = emf.createEntityManager();
-		TypedQuery<ChatHistory> userQuery =
-				em.createQuery("SELECT ch FROM ChatHistory ch WHERE ch.privacy=FALSE", ChatHistory.class);
+		Query userQuery =
+				em.createNativeQuery("SELECT ch FROM ChatHistory ch WHERE ch.privacy=FALSE", ChatHistory.class);
 		List<ChatHistory> chatRooms = userQuery.getResultList();
 		em.close();
 
