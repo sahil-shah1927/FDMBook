@@ -13,79 +13,88 @@
 <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="styles/main.css" />
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
 	<%@ include file="nav.jsp"%>
 	<br>
 	<div id="login-register" class="center-block">
-		<ul class="login-register-tab row">
-			
-			<li class="col-md-6"><a href="#" class="tablinks login-tab active">Log in</a></li>
-			<li class="col-md-6"><a href="#" class="tablinks register-tab">Register</a></li>
+
+		<ul class="nav nav-tabs login-register-tab">
+			<li><a href="#" class="tablinks login-tab active">Log in</a></li>
+			<li><a href="#" class="tablinks register-tab">Register</a></li>
 		</ul>
 
 		<div class="tabcontent login-form">
-		<br>
-		
+
+
 			<form action="login" method="POST" class="id-form">
 				<div class="form-group">
-					<div class="input-group input-container">
-						<div class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></div>
-						<input type="text" class="form-control" name="username" autofocus="autofocus" required="required"
-							placeholder="Username">
+					<div class="input-group width-75">
+						<div class="input-group-addon">
+							<i class="fa fa-user fa-fw" aria-hidden="true"></i>
+						</div>
+						<input type="text" class="form-control" name="username"
+							autofocus="autofocus" required="required" placeholder="Username"
+							maxlength="30">
 					</div>
 
 				</div>
 				<div class="form-group">
-					<div class="input-group input-container">
-						<div class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></div>
-						<input type="password" class="form-control" name="password" autofocus="autofocus" required="required"
-							placeholder="Password">
+					<div class="input-group width-75">
+						<div class="input-group-addon">
+							<i class="fa fa-key fa-fw" aria-hidden="true"></i>
+						</div>
+						<input type="password" class="form-control" name="password"
+							autofocus="autofocus" required="required" placeholder="Password"
+							maxlength="30">
 					</div>
 
 				</div>
 				<p class="errorMessage">${loginError}</p>
-				<div class="form-group">
-					<button type="submit" class="btn"
-						name="login">Sign in</button>
+				<div>
+					<button type="submit" class="btn" name="login">Sign in</button>
 				</div>
 			</form>
 		</div>
-		<div class="tabcontent register-form">
+		<div class="tabcontent register-form display-none">
 			<form action="register" method="POST" id="register-form">
-				<div class="form-group">
-					<label>First Name</label> <input type="text" name="firstname"
-						class="form-input form-control center-block"
+				<div class="form-group width-75 center-block">
+					<input type="text" name="firstname"
+						class="form-control"
 						placeholder="First name" autofocus="autofocus" required="required"
 						maxlength="30">
 				</div>
-				<div class="form-group">
-					<label>Last Name</label> <input type="text" name="lastname"
-						class="form-input form-control center-block"
+				<div class="form-group width-75 center-block">
+					<input type="text" name="lastname"
+						class="form-control"
 						placeholder="Last name" autofocus="autofocus" required="required"
 						maxlength="30">
 				</div>
-				<div class="form-group">
-					<label>Username</label> <input type="text" name="username"
-						class="form-input form-control center-block"
+				<div class="form-group width-75 center-block">
+					<input type="text" name="username"
+						class="form-control"
 						placeholder="Username" autofocus="autofocus" required="required"
 						maxlength="30">
 				</div>
-				<div class="form-group">
-					<label>Password</label> <input type="password" name="password"
-						class="form-input form-control center-block"
+				<div class="form-group width-75 center-block">
+					<input type="password" name="password"
+						class="form-control"
 						placeholder="Password" required="required" maxlength="30">
 				</div>
-				<div class="form-group">
-					<label>Email</label> <input type="email" name="email"
-						class="form-input form-control center-block" placeholder="Email"
+				<div class="form-group width-75 center-block">
+					<input type="email" name="email"
+						class="form-control" placeholder="Email"
 						required="required" maxlength="30">
 				</div>
 				<p class="errorMessage">${loginError}</p>
-				<div class="form-group">
-					<button type="submit" class="btn btn-purple color-white"
+				<div>
+					<button type="submit" class="btn"
 						name="register">Register</button>
 				</div>
 			</form>
@@ -96,5 +105,6 @@
 
 
 
+	<script src="scripts/main.js"></script>
 </body>
 </html>
