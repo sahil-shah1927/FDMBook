@@ -5,7 +5,9 @@
 http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
-	<persistence-unit name="FDMBookJPA">
+	<persistence-unit name="FDMBookJPA" transaction-type="RESOURCE_LOCAL">
+		
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<properties>
 
 			<!-- Scan for annotated classes and Hibernate mapping XML files -->
