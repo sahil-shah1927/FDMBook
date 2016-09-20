@@ -22,7 +22,7 @@ import com.fdmgroup.Models.FDMafiaUser;
 public class LoginController 
 {
 	
-	@RequestMapping(value="LoginUser",method = RequestMethod.POST)
+	@RequestMapping(value="/LoginUser",method = RequestMethod.POST)
 	public String loginUser(Model model, HttpServletRequest request, HttpSession session)
 	{
 		FDMafiaUser loginUser;
@@ -31,18 +31,16 @@ public class LoginController
 			loginUser = AuthenticateCredentials.execute(
 					request.getParameter("username"),request.getParameter("password"));
 			
-			session.setAttribute("LoggedInUser", loginUser);
+			session.setAttribute("LoggedInUser", loginUser);//Successful Login
+			return "home";
 			
 		} 
-		catch (PasswordMismatchException e)//Incorrect Password
+		catch (PasswordMismatchException | UserDoesNotExistException loginException)
 		{
+			//Incorrect Password or User Does Not Exist
 			
+			session.setAttribute("LoginError", loginException.getMessage());
+			return "login";				
 		} 
-		catch (UserDoesNotExistException e)//User Does Not Exist 
-		{
-			
-		}
-		
-		
 	}
 }
