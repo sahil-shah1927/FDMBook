@@ -8,7 +8,13 @@ public class DirectoryController {
 	
 	
 	@RequestMapping(value="/")
-	public String goWelcome() {
+	public String goIndex() {
 		return "index";
 	}
+	
+	@RequestMapping(value="/login")
+	public String goLogin() {
+		return "login";
+	}
+	
 }

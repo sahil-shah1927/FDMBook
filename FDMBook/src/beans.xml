@@ -13,10 +13,10 @@
 
 	<!-- Bean declarations go here -->
 	
-    <bean id="applicationContextProvider" class="com.fdmgroup.heatseeker.DAOs.ApplicationContextProvider"/>	
+    <bean id="applicationContextProvider" class="com.fdmgroup.Spring.ApplicationContextProvider"/>	
 	
 	<bean id="emf" class="javax.persistence.Persistence" factory-method="createEntityManagerFactory">
-		<constructor-arg value="heatseekerjpa"/>
+		<constructor-arg value="FDMBookJPA"/>
 	</bean>
 	
 	
