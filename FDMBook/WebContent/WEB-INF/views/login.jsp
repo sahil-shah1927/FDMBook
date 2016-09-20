@@ -11,13 +11,17 @@
 <title>FDMBook - Log in</title>
 
 <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="styles/main.css" />
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -33,7 +37,7 @@
 		<div class="tabcontent login-form">
 
 
-			<form action="login" method="POST" class="id-form">
+			<form action="LoginUser" method="POST" class="id-form">
 				<div class="form-group">
 					<div class="input-group width-75">
 						<div class="input-group-addon">
@@ -63,39 +67,33 @@
 			</form>
 		</div>
 		<div class="tabcontent register-form display-none">
-			<form action="register" method="POST" id="register-form">
+			<form action="RegisterUser" method="POST" id="register-form">
 				<div class="form-group width-75 center-block">
-					<input type="text" name="firstname"
-						class="form-control"
+					<input type="text" name="firstname" class="form-control"
 						placeholder="First name" autofocus="autofocus" required="required"
 						maxlength="30">
 				</div>
 				<div class="form-group width-75 center-block">
-					<input type="text" name="lastname"
-						class="form-control"
+					<input type="text" name="lastname" class="form-control"
 						placeholder="Last name" autofocus="autofocus" required="required"
 						maxlength="30">
 				</div>
 				<div class="form-group width-75 center-block">
-					<input type="text" name="username"
-						class="form-control"
+					<input type="text" name="username" class="form-control"
 						placeholder="Username" autofocus="autofocus" required="required"
 						maxlength="30">
 				</div>
 				<div class="form-group width-75 center-block">
-					<input type="password" name="password"
-						class="form-control"
+					<input type="password" name="password" class="form-control"
 						placeholder="Password" required="required" maxlength="30">
 				</div>
 				<div class="form-group width-75 center-block">
-					<input type="email" name="email"
-						class="form-control" placeholder="Email"
-						required="required" maxlength="30">
+					<input type="email" name="email" class="form-control"
+						placeholder="Email" required="required" maxlength="30">
 				</div>
 				<p class="errorMessage">${loginError}</p>
 				<div>
-					<button type="submit" class="btn"
-						name="register">Register</button>
+					<button type="submit" class="btn" name="register">Register</button>
 				</div>
 			</form>
 
