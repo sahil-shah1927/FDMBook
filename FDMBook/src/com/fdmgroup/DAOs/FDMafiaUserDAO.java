@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import com.fdmgroup.Exceptions.UserAlreadyExistsException;
 import com.fdmgroup.Exceptions.UserDoesNotExistException;
@@ -44,7 +45,7 @@ public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 		
 		//Create Query for User using username
 		String queryString = "SELECT u FROM FDMafiaUser u WHERE u.username = :username";
-		Query userQuery = myEM.createNativeQuery(queryString, FDMafiaUser.class);
+		TypedQuery<FDMafiaUser> userQuery = myEM.createQuery(queryString, FDMafiaUser.class);
 		userQuery.setParameter("username", username);
 		
 		//Attempt User Retrieval
