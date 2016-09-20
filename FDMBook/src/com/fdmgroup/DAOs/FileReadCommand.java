@@ -8,7 +8,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fdmgroup.Models.FDMBookUser;
+import com.fdmgroup.Models.FDMafiaUser;
 /**
  * 
  * @author Kishan
@@ -70,7 +70,7 @@ public class FileReadCommand implements ReadCommand {
 	
 	
 	@Override
-	public FDMBookUser readUser(String username) {
+	public FDMafiaUser readUser(String username) {
 		// TODO Auto-generated method stub
 		return null;
 	}

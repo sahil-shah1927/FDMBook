@@ -5,11 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
-
-import com.fdmgroup.Models.FDMBookUser;
 import com.fdmgroup.Models.ChatHistory;
+import com.fdmgroup.Models.FDMafiaUser;
 import com.fdmgroup.Models.Message;
-import com.fdmgroup.DAOs.WriteCommand;
 
 /**
  * 
@@ -74,7 +72,7 @@ public class FileWriteCommand implements WriteCommand {
 	}
 
 	@Override
-	public void writeUser(FDMBookUser user) {
+	public void writeUser(FDMafiaUser user) {
 		// TODO Auto-generated method stub
 		
 	}

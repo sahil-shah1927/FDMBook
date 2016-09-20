@@ -1,6 +1,6 @@
 package com.fdmgroup.DAOs;
 
-import com.fdmgroup.Models.FDMBookUser;
+import com.fdmgroup.Models.FDMafiaUser;
 
 /**
  * 
@@ -14,5 +14,5 @@ public interface ReadCommand {
 	 * @param username - Username of user whose data will be retrieved from database.
 	 * @return
 	 */
-	abstract FDMBookUser readUser(String username);
+	abstract FDMafiaUser readUser(String username);
 }

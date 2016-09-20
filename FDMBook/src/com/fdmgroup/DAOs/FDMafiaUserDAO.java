@@ -3,17 +3,17 @@ package com.fdmgroup.DAOs;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-import com.fdmgroup.Models.FDMBookUser;
+import com.fdmgroup.Models.FDMafiaUser;
 
-public class FDMBookUserDAO extends DAO<FDMBookUser>
+public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 {
 
-	public FDMBookUserDAO(EntityManagerFactory emf) {
+	public FDMafiaUserDAO(EntityManagerFactory emf) {
 		super(emf);
 	}
 
 	@Override
-	public void create(FDMBookUser newUser){
+	public void create(FDMafiaUser newUser){
 		
 		EntityManager myEM = myFactory.createEntityManager();
 		
@@ -25,19 +25,22 @@ public class FDMBookUserDAO extends DAO<FDMBookUser>
 	}
 
 	@Override
-	public FDMBookUser read(FDMBookUser object) throws Exception {
-		// TODO Auto-generated method stub
+	public FDMafiaUser read(FDMafiaUser object) throws Exception 
+	{
+		EntityManager myEM = myFactory.createEntityManager();
+		
+		String query = "SELECT FROM ";
 		return null;
 	}
 
 	@Override
-	public void update(FDMBookUser object) {
+	public void update(FDMafiaUser object) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete(FDMBookUser object) throws Exception {
+	public void delete(FDMafiaUser object) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}

@@ -1,6 +1,6 @@
 package com.fdmgroup.DAOs;
 
-import com.fdmgroup.Models.FDMBookUser;
+import com.fdmgroup.Models.FDMafiaUser;
 
 /**
  * 
@@ -12,5 +12,5 @@ public interface WriteCommand {
 	 * 
 	 * @param user - User that is to be stored to some form of database.
 	 */
-	public void writeUser(FDMBookUser user);
+	public void writeUser(FDMafiaUser user);
 }

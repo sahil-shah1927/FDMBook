@@ -21,8 +21,8 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "FDMBOOKUSERS")
-public class FDMBookUser
+@Table(name = "FDMAFIAUSERS")
+public class FDMafiaUser
 {
 	
 	@Id
