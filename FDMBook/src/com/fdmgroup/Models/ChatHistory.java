@@ -70,7 +70,7 @@ public class ChatHistory implements Serializable, Comparable<ChatHistory>{
 	private String chatCreator;
 	
 	@ManyToMany(fetch=FetchType.EAGER,mappedBy = "chatRoomsImIn",cascade=CascadeType.MERGE)
-	private List<FDMBookUser> usersInChatRoom;
+	private List<FDMafiaUser> usersInChatRoom;
 
 	
 	public ChatHistory(String chatRoomName){
@@ -79,7 +79,7 @@ public class ChatHistory implements Serializable, Comparable<ChatHistory>{
 		this.setTimeStamp();
 		
 		this.chatRoomName=chatRoomName;
-		this.usersInChatRoom=new ArrayList<FDMBookUser>();
+		this.usersInChatRoom=new ArrayList<FDMafiaUser>();
 		
 		
 	}
@@ -112,16 +112,16 @@ public class ChatHistory implements Serializable, Comparable<ChatHistory>{
 		this.chatRoomName = chatRoomName;
 	}
 
-	public List<FDMBookUser> getUsersInChatRoom() {
+	public List<FDMafiaUser> getUsersInChatRoom() {
 		return usersInChatRoom;
 	}
 
-	public void setUsersInChatRoom(List<FDMBookUser> usersInChatRoom) {
+	public void setUsersInChatRoom(List<FDMafiaUser> usersInChatRoom) {
 		this.usersInChatRoom = usersInChatRoom;
 	}
 
 	
-	public void addUser(FDMBookUser user){
+	public void addUser(FDMafiaUser user){
 		usersInChatRoom.add(user);
 	}
 	public void addMessage(Message msg) {

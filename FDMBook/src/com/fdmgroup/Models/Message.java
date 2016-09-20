@@ -75,4 +75,14 @@ public class Message implements Comparable<Message> {
 		this.userWhoCreatedMessage = userWhoCreatedMessage;
 	}
 	
+	 @Override
+	    public String toString() {
+	        return "{" +
+	                "\"messageSentByUser\":\"" + messageSentByUser + '\"' +
+	                ",\"userWhoCreatedMessage\":\"" + userWhoCreatedMessage + '\"' +
+	                ",\"timeStamp\":\"" + timeStamp + "\"" +
+	                '}';
+	
+	 }
+	
 }

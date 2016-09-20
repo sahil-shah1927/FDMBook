@@ -1,12 +1,18 @@
 package com.fdmgroup.Models;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 
@@ -50,10 +56,16 @@ public class FDMafiaUser
 	@Column
 	private Date memberSince;
 	
+	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.MERGE)
+	@JoinTable(name = "USER_CHATROOM", joinColumns = {
+	        @JoinColumn(name = "USERNAME")}, inverseJoinColumns = {
+	        @JoinColumn(name = "ROOM_ID")})
+	private List<ChatHistory> chatRoomsImIn;
+	
 	/**
 	 * Default Constructor
 	 */
-	public FDMBookUser()
+	public FDMafiaUser()
 	{
 		
 	}
@@ -168,6 +180,14 @@ public class FDMafiaUser
 	 */
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public List<ChatHistory> getChatRoomsImIn() {
+		return chatRoomsImIn;
+	}
+
+	public void setChatRoomsImIn(List<ChatHistory> chatRoomsImIn) {
+		this.chatRoomsImIn = chatRoomsImIn;
 	}
 	
 	

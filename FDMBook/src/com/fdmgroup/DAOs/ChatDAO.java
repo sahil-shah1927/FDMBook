@@ -68,7 +68,7 @@ public class ChatDAO implements Storage<ChatHistory> {
 		EntityManager em = emf.createEntityManager();
 		Query userQuery =
 				em.createNativeQuery("SELECT ch FROM ChatHistory ch WHERE ch.privacy=FALSE", ChatHistory.class);
-		List<ChatHistory> chatRooms = userQuery.getResultList();
+		List<ChatHistory> chatRooms = (List<ChatHistory>)userQuery.getResultList();
 		em.close();
 
 		return chatRooms;

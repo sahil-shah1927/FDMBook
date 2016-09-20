@@ -26,15 +26,13 @@ public class FileWriteCommand implements WriteCommand {
 	 * @throws IOException
 	 */
 	public void newChatLog(ChatHistory chat) throws IOException{
-		//String path = ("C:" + File.separator+"Users" +File.separator+"Kishan"+ File.separator +"workspace"+File.separator+"ChatSystem_KishanPatel" + File.separator+
-		//		"WebContent"+File.separator+"ChatLogs" + File.separator +chat.getChatMessageLogURL());
 		
-		String path = ("C:" + File.separator+"Users" +File.separator+"kishan.patel1"+ File.separator +"JavaEclipseWorkspace"+File.separator+"ChatSystem_KishanPatel" + File.separator+
-				"WebContent"+File.separator+"ChatLogs" + File.separator +chat.getChatMessageLogURL());
+		String path = ("H:" + File.separator+"git" +File.separator+"FDMBook"+ File.separator +"FDMBook"+File.separator+"WebContent" + File.separator+
+				"WEB-INF" + File.separator +chat.getChatMessageLogURL());
 	
 		File f = new File(path);
 		f.createNewFile();
-
+		
 	}
 	
 	/**
