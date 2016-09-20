@@ -4,7 +4,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import com.fdmgroup.Exceptions.UserDoesNotExistException;
 import com.fdmgroup.Models.FDMafiaUser;

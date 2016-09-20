@@ -20,8 +20,14 @@
 	</bean>
 	
 	
+	<bean id="abstractDAO" abstract="true" class="com.fdmgroup.DAOs.DAO">
+		<constructor-arg ref="emf"/>
+	</bean>
 	
-	<bean id="fdmBookUser" class="com.fdmgroup.Models.FDMBookUser">
+	<bean id="FDMafiaUserDAO" class="com.fdmgroup.DAOs.FDMafiaUserDAO" parent="abstractDAO"/>
+	
+	
+	<bean id="FDMafiaUser" class="com.fdmgroup.Models.FDMafiaUser">
 		<property name="firstName" value="defaultFirst"/>
 		<property name="lastName" value="defaultLast"/>
 		<property name="emailAddress" value="defaultEmail"/>
