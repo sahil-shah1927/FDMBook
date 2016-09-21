@@ -18,7 +18,7 @@
     
         var stompClient = null;
         function connect() {
-            var socket = new SockJS('/FDMafia/newMessage');
+            var socket = new SockJS('${pageContext.request.contextPath}/newMessage');
             stompClient = Stomp.over(socket);
             stompClient.connect({}, function(frame) {
                 stompClient.subscribe('/topic/newMessage', function(message){
@@ -61,7 +61,7 @@
             else { */
                 connect();
             
-                $.getJSON("/FDMafia/messages", function (messages) {
+                $.getJSON("messages", function (messages) {
                 	
                     refreshMessages(messages)
                     

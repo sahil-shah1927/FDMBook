@@ -12,3 +12,5 @@
 {"messageSentByUser":"Kahliik is the best!","userWhoCreatedMessage":"null","timeStamp":"11:48 am"}
 {"messageSentByUser":"ghfghfg","userWhoCreatedMessage":"null","timeStamp":"11:48 am"}
 {"messageSentByUser":"fghfgh","userWhoCreatedMessage":"null","timeStamp":"11:48 am"}
+{"messageSentByUser":"hello","userWhoCreatedMessage":"null","timeStamp":"1:43 pm"}
+{"messageSentByUser":"raw","userWhoCreatedMessage":"null","timeStamp":"1:43 pm"}

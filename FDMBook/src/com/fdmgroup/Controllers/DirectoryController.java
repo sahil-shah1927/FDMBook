@@ -1,6 +1,7 @@
 package com.fdmgroup.Controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -13,7 +14,7 @@ public class DirectoryController {
 	
 	
 	@RequestMapping(value="/")
-	public String goIndex() {
+	public String goIndex(Model model) {
 		return "index";
 	}
 	
