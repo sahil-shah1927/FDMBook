@@ -37,7 +37,7 @@
 		<div class="tabcontent login-form">
 
 
-			<form action="LoginUser" method="POST" class="id-form">
+			<form id="loginForm" action="LoginUser" method="POST" class="id-form">
 				<div class="form-group">
 					<div class="input-group width-75">
 						<div class="input-group-addon">
@@ -104,5 +104,6 @@
 
 
 	<script src="scripts/main.js"></script>
+
 </body>
 </html>

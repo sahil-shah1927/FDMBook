@@ -54,11 +54,11 @@
 
         }
         $(function(){
-           /*  if (typeof $.cookie("realtime-chat-nickname") === 'undefined') {
+            if (typeof $.cookie("realtime-chat-nickname") === 'undefined') {
             	
                 window.location = "/FDMafia/chat"
             } 
-            else { */
+            else { 
                 connect();
             
                 $.getJSON("messages", function (messages) {
@@ -76,7 +76,7 @@
                         sendMessage();
                     }
                 });
-            /* } */
+             } 
             function formatAMPM(date) {
   var hours = date.getHours();
   var minutes = date.getMinutes();
@@ -103,7 +103,7 @@
                 $container[0].scrollTop = $container[0].scrollHeight;
                 var message = $("#messageText").val();
                 var author = $.cookie("realtime-chat-nickname");
-                stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": message, "userWhoCreatedMessage": message.userWhoCreatedMessage, "timeStamp": formatAMPM(new Date())}));
+                stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": message, "userWhoCreatedMessage": author, "timeStamp": formatAMPM(new Date())}));
                 $("#messageText").val("")
                 $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
             }

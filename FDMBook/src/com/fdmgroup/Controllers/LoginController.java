@@ -1,6 +1,8 @@
 package com.fdmgroup.Controllers;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -23,7 +25,7 @@ public class LoginController
 {
 	
 	@RequestMapping(value="/LoginUser",method = RequestMethod.POST)
-	public String loginUser(Model model, HttpServletRequest request, HttpSession session)
+	public String loginUser(Model model, HttpServletRequest request, HttpSession session,HttpServletResponse response)
 	{
 		FDMafiaUser loginUser;
 		try 
@@ -32,6 +34,7 @@ public class LoginController
 					request.getParameter("username"),request.getParameter("password"));
 			
 			session.setAttribute("LoggedInUser", loginUser);//Successful Login
+			response.addCookie(new Cookie("realtime-chat-nickname", request.getParameter("username")));
 			return "home";
 			
 		} 
