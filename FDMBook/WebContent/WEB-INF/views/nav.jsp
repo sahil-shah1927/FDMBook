@@ -30,7 +30,7 @@
 			<li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login/Register</a></li>
 		</c:when>
 	  	<c:otherwise>
-	  		<li style="">Logged in as ${LoggedInUser.username}<a style="display:inline-block" href="logout"></span>[Logout]</a></li>
+	  		<li>Logged in as ${LoggedInUser.username}<a style="display:inline-block" href="logout">[Logout]</a></li>
 		 </c:otherwise>
 	  </c:choose>
       

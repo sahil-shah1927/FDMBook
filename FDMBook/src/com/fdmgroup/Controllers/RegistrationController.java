@@ -29,12 +29,13 @@ public class RegistrationController
 		newUser.setLastName(request.getParameter("lastname"));
 		newUser.setEmailAddress(request.getParameter("email"));
 		
-		if(RegisterUser.execute(newUser))
-			return "login";
-		else
-		{
+		if(RegisterUser.execute(newUser)){
+
+			session.setAttribute("LoginError", "User created!");
+			return "redirect:/login";
+		} else	{
 			session.setAttribute("LoginError", "Username already exists");
-			return "login";
+			return "redirect:/login";
 		}
 		
 	}

@@ -35,7 +35,7 @@ public class LoginController
 			
 			session.setAttribute("LoggedInUser", loginUser);//Successful Login
 			response.addCookie(new Cookie("realtime-chat-nickname", request.getParameter("username")));
-			return "home";
+			return "redirect:/home";
 			
 		} 
 		catch (PasswordMismatchException | UserDoesNotExistException loginException)
@@ -43,7 +43,7 @@ public class LoginController
 			//Incorrect Password or User Does Not Exist
 			
 			session.setAttribute("LoginError", loginException.getMessage());
-			return "login";				
+			return "redirect:/login";				
 		} 
 	}
 	
@@ -52,6 +52,6 @@ public class LoginController
 	{
 		session.removeAttribute("LoggedInUser");
 		session.removeAttribute("LoginError");
-		return "login";
+		return "redirect:/login";
 	}
 }

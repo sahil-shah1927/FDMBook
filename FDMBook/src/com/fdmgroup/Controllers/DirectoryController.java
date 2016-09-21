@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 
@@ -31,4 +32,13 @@ public class DirectoryController {
 		return "chat";
 	}
 	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String redirectLogin() {
+		return "login";
+	}
+	
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String redirectHome() {
+		return "home";
+	}
 }
