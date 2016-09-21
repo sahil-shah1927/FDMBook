@@ -24,8 +24,8 @@ public class AuthenticateCredentials
 		
 		loginUser.setUsername(username);
 		
-		loginUser = userDAO.read(loginUser);//Exception Occurs Here if User doesn't exist
-		if(loginUser.getPassword().equals(password))
+		FDMafiaUser checkUser = userDAO.read(loginUser);//Exception Occurs Here if User doesn't exist
+		if(checkUser.getPassword().equals(password))
 		{
 			return loginUser;
 		}

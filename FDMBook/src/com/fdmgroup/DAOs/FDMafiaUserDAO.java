@@ -19,19 +19,19 @@ public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 	public void create(FDMafiaUser newUser) throws UserAlreadyExistsException
 	{
 		
-		try
-		{
-			read(newUser);
-			throw new UserAlreadyExistsException("Username '" + newUser.getUsername() + "' is already in use!");
-		}
-		catch(UserDoesNotExistException e)
-		{
+//		try
+//		{
+//			read(newUser);
+//			throw new UserAlreadyExistsException("Username '" + newUser.getUsername() + "' is already in use!");
+//		}
+//		catch(UserDoesNotExistException e)
+//		{
 			EntityManager myEM = myFactory.createEntityManager();
 			myEM.getTransaction().begin();
 			myEM.persist(newUser);
 			myEM.getTransaction().commit();
 			myEM.close();
-		}
+		//}
 		
 	}
 
