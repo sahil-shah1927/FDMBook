@@ -116,10 +116,9 @@
         .fixed-panel {
         min-height: 500px;
         max-height: 500px;
+        overflow:scroll;
         }
-        .media-list {
-        overflow: scroll;
-        }
+       
     </style>
 </head>
 <body>
