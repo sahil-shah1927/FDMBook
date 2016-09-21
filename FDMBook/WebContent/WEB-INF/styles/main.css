@@ -54,15 +54,8 @@ body{
 	background-color:#f4f4f4;
 }
 
-/* form styling */
-
-.input-group{
-	margin: 0 auto;
-}
 
 /* login container */
-
-
 #login-register {
 	width:382px;
 	max-width:100%;
@@ -71,6 +64,8 @@ body{
 	border: 1px solid #ccc;
 	border-radius:10px;
 	overflow:hidden;
+	
+	margin-top:10%;
 	
 }
 
@@ -112,12 +107,15 @@ ul.login-register-tab li a:focus, .active {
 	background-color: #ccc;
 }
 
+.input-group{
+	margin: 0 auto;
+}
+
 /* Style the tab content */
 .tabcontent {
 	padding-top:1em;
 	padding-bottom:1em;
 }
-
 
 .tabcontent {
 	-webkit-animation: fadeEffect 1s;
@@ -146,5 +144,6 @@ to {
 }
 .login-register-submit {
 	width: 30%;
-	max-width:100%;
 }
+
+

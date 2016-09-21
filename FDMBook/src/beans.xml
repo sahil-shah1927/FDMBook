@@ -13,21 +13,26 @@
 
 	<!-- Bean declarations go here -->
 	
-    <bean id="applicationContextProvider" class="com.fdmgroup.Spring.ApplicationContextProvider"/>	
+    <bean id="applicationContextProvider" class="com.fdmgroup.Spring.ApplicationContextProvider"/>		
 	
 	<bean id="emf" class="javax.persistence.Persistence" factory-method="createEntityManagerFactory">
 		<constructor-arg value="FDMBookJPA"/>
 	</bean>
 	
 	
+	<bean id="abstractDAO" abstract="true" class="com.fdmgroup.DAOs.DAO">
+		<constructor-arg ref="emf"/>
+	</bean>
 	
-	<bean id="fdmBookUser" class="com.fdmgroup.Models.FDMBookUser">
+	<bean id="FDMafiaUserDAO" class="com.fdmgroup.DAOs.FDMafiaUserDAO" parent="abstractDAO"/>
+	
+	
+	<bean id="FDMafiaUser" class="com.fdmgroup.Models.FDMafiaUser">
 		<property name="firstName" value="defaultFirst"/>
 		<property name="lastName" value="defaultLast"/>
+		<property name="username" value="defaultUsername"/>
 		<property name="emailAddress" value="defaultEmail"/>
 		<property name="password" value="defaultPassword"/>
-		<property name="dateOfBirth" value="password"/>
-		<property name="memberSince" value="password"/>
 	</bean>
 		
 	

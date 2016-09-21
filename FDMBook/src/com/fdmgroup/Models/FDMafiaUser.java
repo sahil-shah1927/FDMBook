@@ -50,11 +50,6 @@ public class FDMafiaUser
 	@Column
 	private String password;
 	
-	@Column
-	private Date dateOfBirth;
-	
-	@Column
-	private Date memberSince;
 	
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.MERGE)
 	@JoinTable(name = "USER_CHATROOM", joinColumns = {
@@ -140,33 +135,8 @@ public class FDMafiaUser
 		this.password = password;
 	}
 
-	/**
-	 * @return the dateOfBirth
-	 */
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
 
-	/**
-	 * @param dateOfBirth the dateOfBirth to set
-	 */
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 
-	/**
-	 * @return the memberSince
-	 */
-	public Date getMemberSince() {
-		return memberSince;
-	}
-
-	/**
-	 * @param memberSince the memberSince to set
-	 */
-	public void setMemberSince(Date memberSince) {
-		this.memberSince = memberSince;
-	}
 
 	/**
 	 * @return the username

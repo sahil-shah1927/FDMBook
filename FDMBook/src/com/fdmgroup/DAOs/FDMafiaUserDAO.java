@@ -6,6 +6,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
+import com.fdmgroup.Exceptions.UserAlreadyExistsException;
 import com.fdmgroup.Exceptions.UserDoesNotExistException;
 import com.fdmgroup.Models.FDMafiaUser;
 
@@ -17,14 +18,22 @@ public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 	}
 
 	@Override
-	public void create(FDMafiaUser newUser){
+	public void create(FDMafiaUser newUser) throws UserAlreadyExistsException
+	{
 		
-		EntityManager myEM = myFactory.createEntityManager();
-		
-		myEM.getTransaction().begin();
-		myEM.persist(newUser);
-		myEM.getTransaction().commit();
-		myEM.close();
+		try
+		{
+			read(newUser);
+			throw new UserAlreadyExistsException("Username '" + newUser.getUsername() + "' is already in use!");
+		}
+		catch(UserDoesNotExistException e)
+		{
+			EntityManager myEM = myFactory.createEntityManager();
+			myEM.getTransaction().begin();
+			myEM.persist(newUser);
+			myEM.getTransaction().commit();
+			myEM.close();
+		}
 		
 	}
 
@@ -36,7 +45,7 @@ public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 		
 		//Create Query for User using username
 		String queryString = "SELECT u FROM FDMafiaUser u WHERE u.username = :username";
-		Query userQuery = myEM.createNativeQuery(queryString, FDMafiaUser.class);
+		TypedQuery<FDMafiaUser> userQuery = myEM.createQuery(queryString, FDMafiaUser.class);
 		userQuery.setParameter("username", username);
 		
 		//Attempt User Retrieval
