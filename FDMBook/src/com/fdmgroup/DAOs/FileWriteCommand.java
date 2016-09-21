@@ -42,17 +42,12 @@ public class FileWriteCommand implements WriteCommand {
 	 */
 	public void writeMessage(String url,Message message) {
 
-		String messageSent = message.getMessageSentByUser();
-		String timeStamp = message.getTimeStamp();
-		String userWhoCreatedMessage = message.getUserWhoCreatedMessage();
-
 		Writer writer = null;
 		
 
 		try {
 				writer = new FileWriter(url, true);
-	
-				writer.write("["+timeStamp+"] " + "["+userWhoCreatedMessage+"]" + " : "+messageSent+ "\n");
+				writer.write(message.toString() +"\n");
 	
 
 		} catch (IOException e) {
