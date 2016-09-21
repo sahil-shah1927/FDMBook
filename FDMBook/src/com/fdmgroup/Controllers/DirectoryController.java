@@ -1,5 +1,7 @@
 package com.fdmgroup.Controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +21,8 @@ public class DirectoryController {
 	}
 	
 	@RequestMapping(value="/login")
-	public String goLogin() {
+	public String goLogin(HttpSession session) 
+	{
 		return "login";
 	}
 	

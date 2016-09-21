@@ -46,4 +46,12 @@ public class LoginController
 			return "login";				
 		} 
 	}
+	
+	@RequestMapping(value="/logout")
+	public String logoutUser(HttpSession session)
+	{
+		session.removeAttribute("LoggedInUser");
+		session.removeAttribute("LoginError");
+		return "login";
+	}
 }
