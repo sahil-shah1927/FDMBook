@@ -1,14 +1,11 @@
 package com.fdmgroup.Models;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -27,23 +24,18 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "FDMAFIAUSERS")
+@Table
 public class FDMafiaUser
 {
-	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int userId;
+	private String username;
 	
 	@Column
 	private String firstName;
 	
 	@Column
 	private String lastName;
-	
-	@Column
-	private String username;
-	
+
 	@Column
 	private String emailAddress;
 	
@@ -63,20 +55,6 @@ public class FDMafiaUser
 	public FDMafiaUser()
 	{
 		
-	}
-
-	/**
-	 * @return the userId
-	 */
-	public int getUserId() {
-		return userId;
-	}
-
-	/**
-	 * @param userId the userId to set
-	 */
-	public void setUserId(int userId) {
-		this.userId = userId;
 	}
 
 	/**

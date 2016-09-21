@@ -3,8 +3,6 @@ package com.fdmgroup.DAOs;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import com.fdmgroup.Exceptions.UserAlreadyExistsException;
 import com.fdmgroup.Exceptions.UserDoesNotExistException;
@@ -41,21 +39,15 @@ public class FDMafiaUserDAO extends DAO<FDMafiaUser>
 	public FDMafiaUser read(FDMafiaUser userToBeRead) throws UserDoesNotExistException 
 	{
 		EntityManager myEM = myFactory.createEntityManager();
-		String username = userToBeRead.getUsername();
-		
-		//Create Query for User using username
-		String queryString = "SELECT u FROM FDMafiaUser u WHERE u.username = :username";
-		TypedQuery<FDMafiaUser> userQuery = myEM.createQuery(queryString, FDMafiaUser.class);
-		userQuery.setParameter("username", username);
 		
 		//Attempt User Retrieval
 		try
 		{
-			return (FDMafiaUser) userQuery.getSingleResult();
+			return myEM.find(FDMafiaUser.class, userToBeRead.getUsername());
 		}
 		catch(NoResultException noResultException)
 		{
-			throw new UserDoesNotExistException("Username '" + username + "' is not registered!");
+			throw new UserDoesNotExistException("Username '" + userToBeRead.getUsername() + "' is not registered!");
 		}
 		finally
 		{

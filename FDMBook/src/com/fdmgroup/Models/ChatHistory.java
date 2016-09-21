@@ -69,8 +69,8 @@ public class ChatHistory implements Serializable, Comparable<ChatHistory>{
 	@Column(name="ROOM_CREATOR")
 	private String chatCreator;
 	
-	@ManyToMany(fetch=FetchType.EAGER,mappedBy = "chatRoomsImIn",cascade=CascadeType.MERGE)
-	private List<FDMafiaUser> usersInChatRoom;
+//	@ManyToMany(fetch=FetchType.EAGER,mappedBy = "chatRoomsImIn",cascade=CascadeType.MERGE)
+//	private List<FDMafiaUser> usersInChatRoom;
 
 	
 	public ChatHistory(String chatRoomName){
@@ -79,7 +79,7 @@ public class ChatHistory implements Serializable, Comparable<ChatHistory>{
 		this.setTimeStamp();
 		
 		this.chatRoomName=chatRoomName;
-		this.usersInChatRoom=new ArrayList<FDMafiaUser>();
+		//this.usersInChatRoom=new ArrayList<FDMafiaUser>();
 		
 		
 	}
@@ -112,18 +112,18 @@ public class ChatHistory implements Serializable, Comparable<ChatHistory>{
 		this.chatRoomName = chatRoomName;
 	}
 
-	public List<FDMafiaUser> getUsersInChatRoom() {
-		return usersInChatRoom;
-	}
-
-	public void setUsersInChatRoom(List<FDMafiaUser> usersInChatRoom) {
-		this.usersInChatRoom = usersInChatRoom;
-	}
-
-	
-	public void addUser(FDMafiaUser user){
-		usersInChatRoom.add(user);
-	}
+//	public List<FDMafiaUser> getUsersInChatRoom() {
+//		return usersInChatRoom;
+//	}
+//
+//	public void setUsersInChatRoom(List<FDMafiaUser> usersInChatRoom) {
+//		this.usersInChatRoom = usersInChatRoom;
+//	}
+//
+//	
+//	public void addUser(FDMafiaUser user){
+//		usersInChatRoom.add(user);
+//	}
 	public void addMessage(Message msg) {
 	
 		
