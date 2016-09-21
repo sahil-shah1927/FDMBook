@@ -60,7 +60,7 @@
 					</div>
 
 				</div>
-				<p class="errorMessage">${loginError}</p>
+				<p class="errorMessage">${LoginError}</p>
 				<div>
 					<button type="submit" class="btn" name="login">Sign in</button>
 				</div>
@@ -91,7 +91,7 @@
 					<input type="email" name="email" class="form-control"
 						placeholder="Email" required="required" maxlength="30">
 				</div>
-				<p class="errorMessage">${loginError}</p>
+				<p class="errorMessage">${LoginError}</p>
 				<div>
 					<button type="submit" class="btn" name="register">Register</button>
 				</div>

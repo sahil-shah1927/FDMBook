@@ -33,8 +33,8 @@ public class RegistrationController
 			return "login";
 		else
 		{
-			session.setAttribute("RegistrationError", "User with these credentials already exists");
-			return "RegisterUser";
+			session.setAttribute("LoginError", "Username already exists");
+			return "login";
 		}
 		
 	}
