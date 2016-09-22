@@ -215,7 +215,7 @@ if(window.location.href.indexOf("franky") > -1) {
 
 			<br />
 			<div class="col-md-12">
-				<div class="join-game-btn">
+				<div class="join-game-btn" style="display:inline-block">
 					<form action="joinGame" method="POST">
 						<input type="hidden" name="username"
 							value="${LoggedInUser.username}">
@@ -225,12 +225,12 @@ if(window.location.href.indexOf("franky") > -1) {
 
 					</form>
 				</div>
-				<div class="spect-game-btn">
+				<div class="spect-game-btn" style="display:inline-block">
 					<form action="spectGame" method="POST">
 						<input type="hidden" name="username"
 							value="${LoggedInUser.username}">
 						<button class="btn btn-info" type="submit" name="spectGameBtn">
-							Join Game</button>
+							Spectate</button>
 
 
 					</form>
