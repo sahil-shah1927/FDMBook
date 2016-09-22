@@ -209,12 +209,23 @@ if(window.location.href.indexOf("franky") > -1) {
 </style>
 </head>
 <body>
-<%@ include file="nav.jsp"%>
+	<%@ include file="nav.jsp"%>
 	<div class="container">
 		<div class="row " style="padding-top: 40px;">
-			
-			<br />
 
+			<br />
+			<div class="col-md-12">
+				<div class="join-game-btn">
+					<form action="joinGame" method="POST">
+						<input type="hidden" name="username"
+							value="${LoggedInUser.username}">
+						<button class="btn btn-info" type="button" name="joinGameBtn">
+							Join Game</button>
+
+
+					</form>
+				</div>
+			</div>
 			<div class="col-md-12">
 				<div class="panel panel-info">
 					<div class="panel-heading">
@@ -228,8 +239,8 @@ if(window.location.href.indexOf("franky") > -1) {
 					<div class="panel-footer">
 						<div class="input-group">
 							<input type="text" class="form-control"
-								placeholder="Enter Message" id="messageText" autofocus="autofocus" /> <span
-								class="input-group-btn">
+								placeholder="Enter Message" id="messageText"
+								autofocus="autofocus" /> <span class="input-group-btn">
 								<button class="btn btn-info" type="button" id="sendMessage"
 									name="message">
 									SEND <span class="glyphicon glyphicon-send"></span>
