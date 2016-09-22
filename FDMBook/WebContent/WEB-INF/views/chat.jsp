@@ -36,7 +36,7 @@ function joinMessage() {
     $container = $('#test');
     $container[0].scrollTop = $container[0].scrollHeight;
     var message = $("#messageText").val();
-    var author = $.cookie("realtime-chat-nickname");
+    var author = JSON.parse($.cookie("currentUser")).username;
     stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;'>"+author +" has joined the room.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
     $("#messageText").val("")
     $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
@@ -47,7 +47,7 @@ function leaveMessage() {
     $container = $('#test');
     $container[0].scrollTop = $container[0].scrollHeight;
     var message = $("#messageText").val();
-    var author = $.cookie("realtime-chat-nickname");
+    var author = JSON.parse($.cookie("currentUser")).username;
     stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:orange;'>"+author +" has left the room.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
     $("#messageText").val("")
     $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
@@ -65,9 +65,7 @@ function formatAMPM(date) {
 	}
     
     
-if(window.location.href.indexOf("franky") > -1) {
-    alert("your url contains the name franky");
- }
+
     
         var stompClient = null;
         function connect() {
@@ -122,7 +120,7 @@ if(window.location.href.indexOf("franky") > -1) {
        
         
         $(function(){
-            if (typeof $.cookie("realtime-chat-nickname") === 'undefined') {
+            if (JSON.parse($.cookie("currentUser")).username == null) {
             	
                 window.location = "${pageContext.request.contextPath}/login"
             } 
@@ -182,7 +180,7 @@ if(window.location.href.indexOf("franky") > -1) {
             	 $container = $('#test');
                  $container[0].scrollTop = $container[0].scrollHeight;
                 var message = $("#messageText").val();
-                var author = $.cookie("realtime-chat-nickname");
+                var author = JSON.parse($.cookie("currentUser")).username;
                 stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": message, "userWhoCreatedMessage": author, "timeStamp": formatAMPM(new Date())}));
                 $("#messageText").val("")
                 $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
