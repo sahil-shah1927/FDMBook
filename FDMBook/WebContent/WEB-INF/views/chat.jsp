@@ -215,12 +215,12 @@ function formatAMPM(date) {
 		<div class="row " style="padding-top: 40px;">
 
 			<br />
-			<div class="col-md-12">
+			<div class="col-md-12" style="margin-bottom:.5em;">
 				<div class="join-game-btn" style="display:inline-block">
 					<form action="joinGame" method="POST">
 						<input type="hidden" name="username"
 							value="${LoggedInUser.username}">
-						<button class="btn btn-info" type="submit" name="joinGameBtn">
+						<button class="btn btn-primary" type="submit" name="joinGameBtn">
 							Join Game</button>
 
 
@@ -230,7 +230,7 @@ function formatAMPM(date) {
 					<form action="spectGame" method="POST">
 						<input type="hidden" name="username"
 							value="${LoggedInUser.username}">
-						<button class="btn btn-info" type="submit" name="spectGameBtn">
+						<button class="btn btn-success" type="submit" name="spectGameBtn">
 							Spectate</button>
 
 
