@@ -31,6 +31,16 @@ public class Game
 	}
 
 	/**
+	 * Determines if Mafia Room is full
+	 * @return 
+	 */
+	public boolean isFull()
+	{
+		return players.size() >= 6;
+	}
+	
+	
+	/**
 	 * @return the players
 	 */
 	public Map<FDMafiaUser, GameStatus> getPlayers() {

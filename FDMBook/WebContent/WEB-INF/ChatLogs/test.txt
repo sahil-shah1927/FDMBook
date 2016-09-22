@@ -127,3 +127,4 @@
 {"messageSentByUser":"sup","userWhoCreatedMessage":"ad","timeStamp":"11:01 am"}
 {"messageSentByUser":"hey","userWhoCreatedMessage":"ad","timeStamp":"11:01 am"}
 {"messageSentByUser":"<span style='color:green;'>ad has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"11:01 am"}
+{"messageSentByUser":"<span style='color:orange;'>sahilshah has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"12:04 pm"}
