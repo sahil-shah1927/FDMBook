@@ -81,10 +81,13 @@ function formatAMPM(date) {
             
             $(window).on('hashchange', function(e){
             	if(window.location.href.indexOf("chat") > -1) {
-            		setTimeout(function(){
-                     	joinMessage()},100);
+            		console.log("change")
+            		
+            	 } else{
+            		 setTimeout(function(){
+                      	joinMessage()},100);
             	 }
-            	 
+            	
             	});
             
            

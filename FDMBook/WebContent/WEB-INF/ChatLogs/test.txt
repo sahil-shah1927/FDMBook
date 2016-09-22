@@ -116,3 +116,14 @@
 {"messageSentByUser":"as","userWhoCreatedMessage":"a","timeStamp":"9:11 am"}
 {"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"9:11 am"}
 {"messageSentByUser":"sup","userWhoCreatedMessage":"a","timeStamp":"9:11 am"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"ad","timeStamp":"10:56 am"}
+{"messageSentByUser":"what is up","userWhoCreatedMessage":"ad","timeStamp":"10:56 am"}
+{"messageSentByUser":"sup bru","userWhoCreatedMessage":"ad","timeStamp":"10:58 am"}
+{"messageSentByUser":"<span style='color:green;'>ad has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"10:58 am"}
+{"messageSentByUser":"<span style='color:green;'>ad has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"10:58 am"}
+{"messageSentByUser":"hello","userWhoCreatedMessage":"ad","timeStamp":"10:58 am"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"ad","timeStamp":"10:59 am"}
+{"messageSentByUser":"<span style='color:green;'>ad has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"11:01 am"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"ad","timeStamp":"11:01 am"}
+{"messageSentByUser":"hey","userWhoCreatedMessage":"ad","timeStamp":"11:01 am"}
+{"messageSentByUser":"<span style='color:green;'>ad has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"11:01 am"}
