@@ -37,7 +37,9 @@ public class LoginController
 					request.getParameter("username"),request.getParameter("password"));
 			
 			session.setAttribute("LoggedInUser", loginUser);//Successful Login
-			response.addCookie(new Cookie("currentUser", mapper.writeValueAsString((loginUser))));
+			Cookie cookie = new Cookie("currentUser", mapper.writeValueAsString((loginUser)));
+			cookie.setMaxAge(21600);
+			response.addCookie(cookie);
 			
 			return "redirect:/home";
 			
