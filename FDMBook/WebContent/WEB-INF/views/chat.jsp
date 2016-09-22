@@ -219,12 +219,23 @@ if(window.location.href.indexOf("franky") > -1) {
 					<form action="joinGame" method="POST">
 						<input type="hidden" name="username"
 							value="${LoggedInUser.username}">
-						<button class="btn btn-info" type="button" name="joinGameBtn">
+						<button class="btn btn-info" type="submit" name="joinGameBtn">
 							Join Game</button>
 
 
 					</form>
 				</div>
+				<div class="spect-game-btn">
+					<form action="spectGame" method="POST">
+						<input type="hidden" name="username"
+							value="${LoggedInUser.username}">
+						<button class="btn btn-info" type="submit" name="spectGameBtn">
+							Join Game</button>
+
+
+					</form>
+				</div>
+				
 			</div>
 			<div class="col-md-12">
 				<div class="panel panel-info">
