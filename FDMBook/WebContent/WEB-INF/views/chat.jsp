@@ -18,8 +18,56 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 
 <script>
+var scrolled = false;
+function updateScroll(){
+    if(!scrolled){
+        var element = document.getElementById("test");
+        element.scrollTop = element.scrollHeight;
+    }
+}
 
-   
+$("#test").bind('scroll', function(){
+    scrolled=true;
+});
+    
+    
+
+function joinMessage() {
+    $container = $('#test');
+    $container[0].scrollTop = $container[0].scrollHeight;
+    var message = $("#messageText").val();
+    var author = $.cookie("realtime-chat-nickname");
+    stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;'>"+author +" has joined the room.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
+    $("#messageText").val("")
+    $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
+}    
+
+
+function leaveMessage() {
+    $container = $('#test');
+    $container[0].scrollTop = $container[0].scrollHeight;
+    var message = $("#messageText").val();
+    var author = $.cookie("realtime-chat-nickname");
+    stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:orange;'>"+author +" has left the room.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
+    $("#messageText").val("")
+    $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
+}  
+
+function formatAMPM(date) {
+	  var hours = date.getHours();
+	  var minutes = date.getMinutes();
+	  var ampm = hours >= 12 ? 'pm' : 'am';
+	  hours = hours % 12;
+	  hours = hours ? hours : 12; // the hour '0' should be '12'
+	  minutes = minutes < 10 ? '0'+minutes : minutes;
+	  var strTime = hours + ':' + minutes + ' ' + ampm;
+	  return strTime;
+	}
+    
+    
+if(window.location.href.indexOf("franky") > -1) {
+    alert("your url contains the name franky");
+ }
     
         var stompClient = null;
         function connect() {
@@ -29,10 +77,22 @@
                 stompClient.subscribe('/topic/newMessage', function(message){
                 	
                     refreshMessages(JSON.parse(JSON.parse(message.body).content));
-   
+                    
                 });
             });
-        }
+            
+            $(window).on('hashchange', function(e){
+            	if(window.location.href.indexOf("chat") > -1) {
+            		setTimeout(function(){
+                     	joinMessage()},100);
+            	 }
+            	 
+            	});
+            
+           
+            }
+        
+        
         function disconnect() {
             if (stompClient != null) {
                 stompClient.disconnect();
@@ -41,9 +101,9 @@
         function refreshMessages(messages) {
             $(".media-list").html("");
             
-            for (var i=0; i<messages.length;i++){
+            $.each(messages, function(i, message) {
             	
-            	var message = messages[i];
+            	
             	if (typeof message !=='object' ){
             		var json=JSON.parse(message);
             		$(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body">'
@@ -53,27 +113,32 @@
                             + message.messageSentByUser + '<br/><small class="text-muted">' + message.userWhoCreatedMessage + ' | ' + message.timeStamp + '</small><hr/></div></div></div></li>');
                 	
             	}
-
-            	
-            }
+            });
+            updateScroll();
 
         }
+        
+       
+       
+        
         $(function(){
             if (typeof $.cookie("realtime-chat-nickname") === 'undefined') {
             	
-                window.location = "/FDMafia/chat"
+                window.location = "${pageContext.request.contextPath}/login"
             } 
             else { 
                 connect();
-            
+                
                 $.getJSON("messages", function (messages) {
                 	
                     refreshMessages(messages)
                     
+                    
                 });
-                
                 $("#sendMessage").on("click", function() {
                     sendMessage()
+                    
+                    
                 });
                 $('#messageText').keyup(function(e){
                     if(e.keyCode == 13)
@@ -82,30 +147,40 @@
                     }
                 });
              } 
-            function formatAMPM(date) {
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  minutes = minutes < 10 ? '0'+minutes : minutes;
-  var strTime = hours + ':' + minutes + ' ' + ampm;
-  return strTime;
-}
             
-            function joinMessage() {
-                $container = $('.media-list');
-                $container[0].scrollTop = $container[0].scrollHeight;
-                var message = $("#messageText").val();
-                var author = $.cookie("realtime-chat-nickname");
-                stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "kishan" +" has join the room.", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
-                $("#messageText").val("")
-                $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
-            }
+            
+            
+            function detectRefresh(){
+            	 try
+            	 {
+            	   if(window.opener.title == undefined){
+            	 isRefresh = true;
+            	 
+            	   }
+            	 }
+            	 catch(err)
+            	 {
+            	 isRefresh = false;
+            	 leaveMessage();
+            	 } 
+            	 }
+            
+            window.addEventListener("beforeunload", function (e) {
+            	 setTimeout(function(){
+            		 detectRefresh();
+            	 },500);
+            	 
+//             	 var confirmationMessage = "Are you sure you would like to leave?";
+
+//            	  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+//            	  return confirmationMessage;  
+            	});
+            
+     
             
             function sendMessage() {
-                $container = $('.media-list');
-                $container[0].scrollTop = $container[0].scrollHeight;
+            	 $container = $('#test');
+                 $container[0].scrollTop = $container[0].scrollHeight;
                 var message = $("#messageText").val();
                 var author = $.cookie("realtime-chat-nickname");
                 stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": message, "userWhoCreatedMessage": author, "timeStamp": formatAMPM(new Date())}));
@@ -146,7 +221,7 @@
 						<strong><span class="glyphicon glyphicon-list"></span>
 							Chat History</strong>
 					</div>
-					<div class="panel-body fixed-panel">
+					<div id="test" class="panel-body fixed-panel">
 						<ul class="media-list">
 						</ul>
 					</div>

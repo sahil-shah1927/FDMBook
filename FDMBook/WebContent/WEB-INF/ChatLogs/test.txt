@@ -1,24 +1,97 @@
 {"messageSentByUser":"hello world","userWhoCreatedMessage":"kishan","timeStamp":"2:11 PM"}
-{"messageSentByUser":"yo what up","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"sup","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"bro","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"sup dude","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"naw bruh","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"hello","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"my name is kishan","userWhoCreatedMessage":"null","timeStamp":"10:14 am"}
-{"messageSentByUser":"Hi ","userWhoCreatedMessage":"null","timeStamp":"10:54 am"}
-{"messageSentByUser":"sdfsdf","userWhoCreatedMessage":"null","timeStamp":"10:54 am"}
-{"messageSentByUser":"HOHOHOHO","userWhoCreatedMessage":"null","timeStamp":"10:54 am"}
-{"messageSentByUser":"Kahliik is the best!","userWhoCreatedMessage":"null","timeStamp":"11:48 am"}
-{"messageSentByUser":"ghfghfg","userWhoCreatedMessage":"null","timeStamp":"11:48 am"}
-{"messageSentByUser":"fghfgh","userWhoCreatedMessage":"null","timeStamp":"11:48 am"}
-{"messageSentByUser":"hello","userWhoCreatedMessage":"null","timeStamp":"1:43 pm"}
-{"messageSentByUser":"raw","userWhoCreatedMessage":"null","timeStamp":"1:43 pm"}
-{"messageSentByUser":"sup","userWhoCreatedMessage":"null","timeStamp":"2:05 pm"}
-{"messageSentByUser":"hello","userWhoCreatedMessage":"null","timeStamp":"2:05 pm"}
-{"messageSentByUser":"fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff","userWhoCreatedMessage":"null","timeStamp":"2:07 pm"}
-{"messageSentByUser":"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff","userWhoCreatedMessage":"null","timeStamp":"2:07 pm"}
-{"messageSentByUser":"hi","userWhoCreatedMessage":"k","timeStamp":"2:29 pm"}
-{"messageSentByUser":"hello","userWhoCreatedMessage":"k","timeStamp":"2:29 pm"}
-{"messageSentByUser":"yo","userWhoCreatedMessage":"l","timeStamp":"2:33 pm"}
-{"messageSentByUser":"AY","userWhoCreatedMessage":"mingming","timeStamp":"3:48 pm"}
+{"messageSentByUser":"<span style='color:green;'>f has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:52 pm"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"f","timeStamp":"4:52 pm"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"f","timeStamp":"4:52 pm"}
+{"messageSentByUser":"","userWhoCreatedMessage":"f","timeStamp":"4:52 pm"}
+{"messageSentByUser":"fgh","userWhoCreatedMessage":"f","timeStamp":"4:52 pm"}
+{"messageSentByUser":"<span style='color:green;'>f has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:53 pm"}
+{"messageSentByUser":"a","userWhoCreatedMessage":"f","timeStamp":"4:53 pm"}
+{"messageSentByUser":"<span style='color:green;'>f has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:54 pm"}
+{"messageSentByUser":"a","userWhoCreatedMessage":"f","timeStamp":"4:54 pm"}
+{"messageSentByUser":"sdaf","userWhoCreatedMessage":"undefined","timeStamp":"4:54 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:55 pm"}
+{"messageSentByUser":"hey","userWhoCreatedMessage":"a","timeStamp":"4:55 pm"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"4:55 pm"}
+{"messageSentByUser":"whats up","userWhoCreatedMessage":"a","timeStamp":"4:55 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:55 pm"}
+{"messageSentByUser":"asdf","userWhoCreatedMessage":"a","timeStamp":"4:55 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:56 pm"}
+{"messageSentByUser":"hey","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"whats up","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"naw","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"bruh","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"dude","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"a","userWhoCreatedMessage":"a","timeStamp":"4:56 pm"}
+{"messageSentByUser":"asdf","userWhoCreatedMessage":"undefined","timeStamp":"4:56 pm"}
+{"messageSentByUser":"","userWhoCreatedMessage":"undefined","timeStamp":"4:56 pm"}
+{"messageSentByUser":"","userWhoCreatedMessage":"undefined","timeStamp":"4:56 pm"}
+{"messageSentByUser":"asdf","userWhoCreatedMessage":"undefined","timeStamp":"4:56 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:57 pm"}
+{"messageSentByUser":"asd","userWhoCreatedMessage":"a","timeStamp":"4:57 pm"}
+{"messageSentByUser":"","userWhoCreatedMessage":"undefined","timeStamp":"4:57 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"4:58 pm"}
+{"messageSentByUser":"hey","userWhoCreatedMessage":"a","timeStamp":"4:58 pm"}
+{"messageSentByUser":"hey","userWhoCreatedMessage":"a","timeStamp":"4:58 pm"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"4:58 pm"}
+{"messageSentByUser":"","userWhoCreatedMessage":"undefined","timeStamp":"4:58 pm"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"undefined","timeStamp":"4:58 pm"}
+{"messageSentByUser":"dude","userWhoCreatedMessage":"undefined","timeStamp":"4:58 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:00 pm"}
+{"messageSentByUser":"test1","userWhoCreatedMessage":"a","timeStamp":"5:00 pm"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"5:00 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:00 pm"}
+{"messageSentByUser":"<span style='color:green;'>k has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:01 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:01 pm"}
+{"messageSentByUser":"hey","userWhoCreatedMessage":"a","timeStamp":"5:01 pm"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"k","timeStamp":"5:01 pm"}
+{"messageSentByUser":"dude whats up!","userWhoCreatedMessage":"k","timeStamp":"5:01 pm"}
+{"messageSentByUser":"its me, kishan","userWhoCreatedMessage":"k","timeStamp":"5:01 pm"}
+{"messageSentByUser":"well, tis i, APPLE","userWhoCreatedMessage":"a","timeStamp":"5:01 pm"}
+{"messageSentByUser":"k bye apple","userWhoCreatedMessage":"k","timeStamp":"5:02 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:03 pm"}
+{"messageSentByUser":"<span style='color:orange;'>a has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:03 pm"}
+{"messageSentByUser":"<span style='color:orange;'>undefined has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:04 pm"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:04 pm"}
+{"messageSentByUser":"<span style='color:orange;'>a has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"5:04 pm"}
+{"messageSentByUser":"<span style='color:orange;'>undefined has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:19 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:19 am"}
+{"messageSentByUser":"<span style='color:green;'>k has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:19 am"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"k","timeStamp":"8:20 am"}
+{"messageSentByUser":"hello","userWhoCreatedMessage":"a","timeStamp":"8:20 am"}
+{"messageSentByUser":"<span style='color:orange;'>k has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:20 am"}
+{"messageSentByUser":"<span style='color:orange;'>a has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:20 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:22 am"}
+{"messageSentByUser":"<span style='color:orange;'>a has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:22 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:23 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:23 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:23 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:27 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:27 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:27 am"}
+{"messageSentByUser":"test","userWhoCreatedMessage":"a","timeStamp":"8:27 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:28 am"}
+{"messageSentByUser":"hello","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"what is up dawg","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"man","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"bruh","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"asdfasd","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"asdfasdfasdf","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"wtf","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"naw","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"dawg","userWhoCreatedMessage":"a","timeStamp":"8:34 am"}
+{"messageSentByUser":"<span style='color:green;'>a has joined the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:36 am"}
+{"messageSentByUser":"sup","userWhoCreatedMessage":"null","timeStamp":"8:37 am"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"null","timeStamp":"8:37 am"}
+{"messageSentByUser":"dawg","userWhoCreatedMessage":"null","timeStamp":"8:37 am"}
+{"messageSentByUser":"asdf","userWhoCreatedMessage":"a","timeStamp":"8:38 am"}
+{"messageSentByUser":"yo","userWhoCreatedMessage":"a","timeStamp":"8:38 am"}
+{"messageSentByUser":"hello","userWhoCreatedMessage":"a","timeStamp":"8:38 am"}
+{"messageSentByUser":"whats up","userWhoCreatedMessage":"a","timeStamp":"8:38 am"}
+{"messageSentByUser":"naw","userWhoCreatedMessage":"a","timeStamp":"8:38 am"}
+{"messageSentByUser":"hu","userWhoCreatedMessage":"a","timeStamp":"8:38 am"}
+{"messageSentByUser":"<span style='color:orange;'>a has left the room.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"8:39 am"}
