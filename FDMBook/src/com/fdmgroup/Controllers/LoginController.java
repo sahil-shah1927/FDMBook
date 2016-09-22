@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fdmgroup.Commands.AuthenticateCredentials;
 import com.fdmgroup.Exceptions.PasswordMismatchException;
 import com.fdmgroup.Exceptions.UserDoesNotExistException;
@@ -25,16 +27,18 @@ public class LoginController
 {
 	
 	@RequestMapping(value="/LoginUser",method = RequestMethod.POST)
-	public String loginUser(Model model, HttpServletRequest request, HttpSession session,HttpServletResponse response)
+	public String loginUser(Model model, HttpServletRequest request, HttpSession session,HttpServletResponse response) throws JsonProcessingException
 	{
 		FDMafiaUser loginUser;
+		ObjectMapper mapper = new ObjectMapper();
 		try 
 		{
 			loginUser = AuthenticateCredentials.execute(
 					request.getParameter("username"),request.getParameter("password"));
 			
 			session.setAttribute("LoggedInUser", loginUser);//Successful Login
-			response.addCookie(new Cookie("realtime-chat-nickname", request.getParameter("username")));
+			response.addCookie(new Cookie("currentUser", mapper.writeValueAsString((loginUser))));
+			
 			return "redirect:/home";
 			
 		} 
