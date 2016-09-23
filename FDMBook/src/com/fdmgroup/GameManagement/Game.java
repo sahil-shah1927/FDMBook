@@ -27,7 +27,9 @@ public class Game
 	 */
 	public void addPlayer(FDMafiaUser newPlayer)
 	{
-		players.put(newPlayer, new GameStatus());
+		if (!players.containsKey(newPlayer)){
+			players.put(newPlayer, new GameStatus());
+		}
 	}
 
 	/**
@@ -36,7 +38,7 @@ public class Game
 	 */
 	public boolean isFull()
 	{
-		return players.size() >= 6;
+		return players.size() >= 5;
 	}
 	
 	

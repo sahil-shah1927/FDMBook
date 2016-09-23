@@ -1,0 +1,1 @@
+{"messageSentByUser":"<span style='color:green;'>k has joined the game.</span>","userWhoCreatedMessage":"SYSTEM","timeStamp":"12:01 pm"}

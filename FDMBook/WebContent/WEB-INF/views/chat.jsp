@@ -18,6 +18,9 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 
 <script>
+
+
+
 var scrolled = false;
 function updateScroll(){
     if(!scrolled){
@@ -142,7 +145,14 @@ function formatAMPM(date) {
                 });
              } 
             
+            $("#joinButton").on('click',function(e){
+            	joinGame();
+            	$(this).prop('disabled', true);
+				
+				
+            }
             
+            )
             
             function detectRefresh(){
             	
@@ -178,7 +188,18 @@ function formatAMPM(date) {
                 $("#messageText").val("")
                 $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
             }
+            
+            function joinGame() {
+           	 $container = $('#test');
+                $container[0].scrollTop = $container[0].scrollHeight;
+               var author = JSON.parse($.cookie("currentUser")).username;
+               stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;'>"+author +" has joined the game.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
+               $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
+           }
+            
         })
+        
+        
     </script>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
@@ -207,14 +228,14 @@ function formatAMPM(date) {
 			<br />
 			<div class="col-md-12" style="margin-bottom:.5em;">
 				<div class="join-game-btn" style="display:inline-block">
-					<form action="joinGame" method="POST">
-						<input type="hidden" name="username"
-							value="${LoggedInUser.username}">
-						<button class="btn btn-primary" type="submit" name="joinGameBtn">
+<!-- 					<form action="joinGame" method="POST"> -->
+<!-- 						<input type="hidden" name="username" -->
+<%-- 							value="${LoggedInUser.username}"> --%>
+						<button id="joinButton" class="btn btn-primary" type="submit" name="joinGameBtn">
 							Join Game</button>
 
 
-					</form>
+<!-- 					</form> -->
 				</div>
 				<div class="spect-game-btn" style="display:inline-block">
 					<form action="spectGame" method="POST">

@@ -35,7 +35,7 @@ public class MessageController {
 	    public HttpEntity<List<String>> list() {
 	    	FileReadCommand frc = new FileReadCommand();
 	    	String path = "H:/git/FDMBook/FDMBook/WebContent/WEB-INF/ChatLogs/test.txt";
-	        List<String> messageList = frc.readMessages(path);;
+	        List<String> messageList = frc.readMessages(path);
 	        return new ResponseEntity<List<String>>(messageList, HttpStatus.OK);
 	    }
 	
