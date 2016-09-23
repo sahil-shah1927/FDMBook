@@ -6,7 +6,7 @@ import com.fdmgroup.Models.FDMafiaUser;
 
 public class TestGameDriver 
 {
-	public static void main()
+	public static void main(String[] args)
 	{
 		Game testGame = new Game();
 		
@@ -14,19 +14,28 @@ public class TestGameDriver
 			user1.setUsername("user1");
 			
 		FDMafiaUser user2 = new FDMafiaUser();
-			user1.setUsername("user2");
+			user2.setUsername("user2");
 		
 		FDMafiaUser user3 = new FDMafiaUser();
-			user1.setUsername("user3");
+			user3.setUsername("user3");
 		
 		FDMafiaUser user4 = new FDMafiaUser();
-			user1.setUsername("user4");
+			user4.setUsername("user4");
 		
 		FDMafiaUser user5 = new FDMafiaUser();
-			user1.setUsername("user5");
+			user5.setUsername("user5");
 		
 		FDMafiaUser user6 = new FDMafiaUser();
-			user1.setUsername("user6");
+			user6.setUsername("user6");
+			
+			FDMafiaUser user7 = new FDMafiaUser();
+			user7.setUsername("user7");
+			
+			FDMafiaUser user8 = new FDMafiaUser();
+			user8.setUsername("user8");
+			
+			FDMafiaUser user9 = new FDMafiaUser();
+			user9.setUsername("user9");
 			
 		testGame.addPlayer(user1);
 		testGame.addPlayer(user2);
@@ -34,6 +43,9 @@ public class TestGameDriver
 		testGame.addPlayer(user4);
 		testGame.addPlayer(user5);
 		testGame.addPlayer(user6);
+		testGame.addPlayer(user7);
+		testGame.addPlayer(user8);
+		testGame.addPlayer(user9);
 		
 		HashMap<FDMafiaUser,GameStatus> players = (HashMap<FDMafiaUser,GameStatus>)testGame.getPlayers();
 	
@@ -43,6 +55,9 @@ public class TestGameDriver
 		System.out.println(user4.getUsername() + ": " + players.get(user4).getGameRole());
 		System.out.println(user5.getUsername() + ": " + players.get(user5).getGameRole());
 		System.out.println(user6.getUsername() + ": " + players.get(user6).getGameRole());
+		System.out.println(user7.getUsername() + ": " + players.get(user7).getGameRole());
+		System.out.println(user8.getUsername() + ": " + players.get(user8).getGameRole());
+		System.out.println(user9.getUsername() + ": " + players.get(user9).getGameRole());
 
 	}
 }

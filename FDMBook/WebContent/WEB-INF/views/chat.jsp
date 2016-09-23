@@ -79,17 +79,10 @@ function formatAMPM(date) {
                 });
             });
             
-            $(window).on('hashchange', function(e){
-            	if(window.location.href.indexOf("chat") > -1) {
-            		console.log("change")
-            		
-            	 } else{
-            		 setTimeout(function(){
-                      	joinMessage()},100);
-            	 }
+           
+//             		 setTimeout(function(){
+//                       	joinMessage()},100);
             	
-            	});
-            
            
             }
         
@@ -152,32 +145,29 @@ function formatAMPM(date) {
             
             
             function detectRefresh(){
-            	 try
-            	 {
+            	
             	   if(window.opener.title == undefined){
             	 isRefresh = true;
+            	 alert("refresh")
             	 
-            	   }
-            	 }
-            	 catch(err)
-            	 {
+            	   };
+            	 
+            	
             	 isRefresh = false;
             	 leaveMessage();
+            	 alert(isRefresh)
             	 } 
-            	 }
-            
-            window.addEventListener("beforeunload", function (e) {
-            	 setTimeout(function(){
-            		 detectRefresh();
-            	 },500);
             	 
-//             	 var confirmationMessage = "Are you sure you would like to leave?";
-
-//            	  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-//            	  return confirmationMessage;  
-            	});
             
-     
+//             window.addEventListener("beforeunload", function (e) {
+//            		detectRefresh();
+//             	leaveMessage();
+//             	});
+            
+//             window.addEventListener("unload", function (e) {
+//            		detectRefresh();
+            
+//             	});
             
             function sendMessage() {
             	 $container = $('#test');

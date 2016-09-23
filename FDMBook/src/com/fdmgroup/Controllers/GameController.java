@@ -18,12 +18,16 @@ public class GameController
 	{
 		ServletContext appContext = request.getSession().getServletContext();
 		FDMafiaUser userToBeAdded = (FDMafiaUser)session.getAttribute("LoggedInUser");
-		
 		Game game =  (Game) appContext.getAttribute("game");
+		if(game.isFull()){
+			
+		} 
+		
+		
 		game.addPlayer(userToBeAdded);
-		
+		System.out.println(userToBeAdded.getUsername() + " has joined as " + game.getPlayers().get(userToBeAdded).getGameRole());
 		appContext.setAttribute("game", game);
-		
+	
 		return "chat";
 		
 	}
