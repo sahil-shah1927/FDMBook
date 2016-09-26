@@ -32,8 +32,8 @@ public class GameController
 
 		
 		game.addPlayer(userToBeAdded);
-		System.out.println(userToBeAdded.getUsername() + " has joined as " + game.getPlayers().get(userToBeAdded).getGameRole());
 		Cookie cookie = new Cookie("role",game.getPlayers().get(userToBeAdded).getGameRole().toString());
+		cookie.setMaxAge(21600);
 		response.addCookie(cookie);
 		appContext.setAttribute("game", game);
 	    return "chat";

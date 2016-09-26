@@ -19,7 +19,7 @@ function joinMessage() {
     $container[0].scrollTop = $container[0].scrollHeight;
     var message = $("#messageText").val();
     var author = JSON.parse($.cookie("currentUser")).username;
-    stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;'>"+author +" has joined the room.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
+    stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;font-weight:bolder'>"+author +" has joined the room.</span>", "userWhoCreatedMessage": "SYSTEM","sentTo": "all", "timeStamp": formatAMPM(new Date())}));
     $("#messageText").val("")
     $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
 }    
@@ -30,7 +30,7 @@ function leaveMessage() {
     $container[0].scrollTop = $container[0].scrollHeight;
     var message = $("#messageText").val();
     var author = JSON.parse($.cookie("currentUser")).username;
-    stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:orange;'>"+author +" has left the room.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
+    stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:orange;font-weight:bolder'>"+author +" has left the room.</span>", "userWhoCreatedMessage": "SYSTEM","sentTo": "all", "timeStamp": formatAMPM(new Date())}));
     $("#messageText").val("")
     $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
 }  
@@ -80,13 +80,20 @@ function formatAMPM(date) {
             $.each(messages, function(i, message) {
             	
             	
-            	if (typeof message !=='object' ){
+            	if (typeof message !=='object'){
             		var json=JSON.parse(message);
-            		$(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body">'
-                            + json.messageSentByUser + '<br/><small class="text-muted">' + json.userWhoCreatedMessage + ' | ' + json.timeStamp + '</small><hr/></div></div></div></li>');
+            		if(json.sentTo == "all" || json.sentTo == $.cookie("role")){
+            			
+                		$(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body">'
+                                + json.messageSentByUser + '<br/><small class="text-muted">' + json.userWhoCreatedMessage + ' | ' + json.timeStamp + '</small><hr/></div></div></div></li>');
+            		}
+            		
             	} else{
-            		$(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body">'
-                            + message.messageSentByUser + '<br/><small class="text-muted">' + message.userWhoCreatedMessage + ' | ' + message.timeStamp + '</small><hr/></div></div></div></li>');
+            		if(message.sentTo =="all" || message.sentTo==$.cookie("role")){
+                		$(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body">'
+                                + message.messageSentByUser + '<br/><small class="text-muted">' + message.userWhoCreatedMessage + ' | ' + message.timeStamp + '</small><hr/></div></div></div></li>');
+            		}
+
                 	
             	}
             });
@@ -148,7 +155,8 @@ function formatAMPM(date) {
 								joinGame();
 								alert($.cookie("role"));
 							
-				     
+					               stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:purple;font-weight:bolder;'>Your role is : "  + $.cookie("role")+"</span>", "userWhoCreatedMessage": "SYSTEM","sentTo": $.cookie("role"), "timeStamp": formatAMPM(new Date())}));
+
 					
 				
 					e.preventDefault();
@@ -173,7 +181,7 @@ function formatAMPM(date) {
                  $container[0].scrollTop = $container[0].scrollHeight;
                 var message = $("#messageText").val();
                 var author = JSON.parse($.cookie("currentUser")).username;
-                stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": message, "userWhoCreatedMessage": author, "timeStamp": formatAMPM(new Date())}));
+                stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": message, "userWhoCreatedMessage": author, "sentTo": "all","timeStamp": formatAMPM(new Date())}));
                 $("#messageText").val("")
                 $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
             }
@@ -182,7 +190,8 @@ function formatAMPM(date) {
            	 $container = $('#test');
                 $container[0].scrollTop = $container[0].scrollHeight;
                var author = JSON.parse($.cookie("currentUser")).username;
-               stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;'>"+author +" has joined the game.</span>", "userWhoCreatedMessage": "SYSTEM", "timeStamp": formatAMPM(new Date())}));
+               stompClient.send("/app/newMessage", {}, JSON.stringify({ "messageSentByUser": "<span style='color:green;font-weight:bolder'>"+author +" has joined the game.</span>", "userWhoCreatedMessage": "SYSTEM","sentTo": "all", "timeStamp": formatAMPM(new Date())}));
+
                $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
            }
             

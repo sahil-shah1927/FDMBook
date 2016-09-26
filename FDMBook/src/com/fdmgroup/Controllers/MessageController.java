@@ -2,6 +2,8 @@ package com.fdmgroup.Controllers;
 
 import java.util.List;
 
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +28,7 @@ public class MessageController {
 		 	FileWriteCommand fwc = new FileWriteCommand();
 		 	FileReadCommand frc = new FileReadCommand();
 		 	String path = "H:/git/FDMBook/FDMBook/WebContent/WEB-INF/ChatLogs/test.txt";
+		 	message.setMessageSentByUser(Jsoup.clean(message.getMessageSentByUser(),Whitelist.basicWithImages()));
 		 	fwc.writeMessage(path, message);
 	        List<String> messageList = frc.readMessages(path);
 	        return new MessageJSON(messageList.toString());

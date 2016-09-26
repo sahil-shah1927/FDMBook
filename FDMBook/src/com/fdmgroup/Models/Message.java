@@ -13,13 +13,9 @@ import javax.persistence.Id;
  * @author Kishan
  *
  */
-public class Message implements Comparable<Message> {
+public class Message {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int message_id;
-	
-
+	private String sentTo;
 
 	private String messageSentByUser;
 	
@@ -44,21 +40,6 @@ public class Message implements Comparable<Message> {
 		this.timeStamp = new SimpleDateFormat("h:mm a").format(new java.util.Date());
 	}
 
-
-	public int getMessage_id() {
-		return message_id;
-	}
-
-	public void setMessage_id(int message_id) {
-		this.message_id = message_id;
-	}
-	
-	@Override
-	public int compareTo(Message msg) {
-		return this.message_id < msg.message_id ? -1 : this.message_id == msg.message_id ? 0 : 1;
-	}
-
-
 	public String getMessageSentByUser() {
 		return messageSentByUser;
 	}
@@ -80,9 +61,18 @@ public class Message implements Comparable<Message> {
 	        return "{" +
 	                "\"messageSentByUser\":\"" + messageSentByUser + '\"' +
 	                ",\"userWhoCreatedMessage\":\"" + userWhoCreatedMessage + '\"' +
+	                ",\"sentTo\":\"" + sentTo + '\"' +
 	                ",\"timeStamp\":\"" + timeStamp + "\"" +
 	                '}';
 	
 	 }
+
+	public String getSentTo() {
+		return sentTo;
+	}
+
+	public void setSentTo(String sentTo) {
+		this.sentTo = sentTo;
+	}
 	
 }
